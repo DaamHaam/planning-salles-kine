@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Planning horaire d’occupation des cinq salles du cabinet."
+    />
+    <title>Planning des salles</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231f3545'/%3E%3Cpath d='M6 8h4v16H6zm8 0h4v16h-4zm8 0h4v16h-4z' fill='%23fff'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260929-3" />
+  </head>
+  <body>
+    <main class="planning-only">
+      <h1 class="visually-hidden">Planning hebdomadaire des salles</h1>
+
+      <div class="board-scroll" tabindex="0" aria-label="Planning, défilement horizontal sur petit écran">
+        <section
+          class="planning-board"
+          id="planningBoard"
+          aria-label="Occupation des salles du lundi au vendredi, de 8 heures à 19 heures"
+        ></section>
+      </div>
+
+      <section class="planning-controls" aria-label="Outils de modification du planning">
+        <p class="selection-status visually-hidden" id="selectionStatus" aria-live="polite">
+          Sélectionnez un kiné, puis cliquez sur les heures à ajouter ou à retirer.
+        </p>
+        <div class="legend-row">
+          <div class="legend" id="legend" aria-label="Choix du professionnel"></div>
+          <button class="reset-button" id="resetButton" type="button">Réinitialiser</button>
+        </div>
+      </section>
+      <p class="visually-hidden" id="validationStatus" aria-live="polite"></p>
+    </main>
+
+    <script src="script.js?v=20260929-3"></script>
+  </body>
+</html>
